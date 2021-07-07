@@ -1,0 +1,6 @@
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\10-switch\bin\Debug\10-switch.exe.config
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\10-switch\bin\Debug\10-switch.exe
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\10-switch\bin\Debug\10-switch.pdb
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\10-switch\obj\Debug\10-switch.csproj.CoreCompileInputs.cache
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\10-switch\obj\Debug\10-switch.exe
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\10-switch\obj\Debug\10-switch.pdb
