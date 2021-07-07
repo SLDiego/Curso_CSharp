@@ -1,0 +1,7 @@
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\P11 - CalculaPoupança\bin\Debug\P11 - CalculaPoupança.exe.config
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\P11 - CalculaPoupança\bin\Debug\P11 - CalculaPoupança.exe
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\P11 - CalculaPoupança\bin\Debug\P11 - CalculaPoupança.pdb
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\P11 - CalculaPoupança\obj\Debug\P11 - CalculaPoupança.csproj.AssemblyReference.cache
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\P11 - CalculaPoupança\obj\Debug\P11 - CalculaPoupança.csproj.CoreCompileInputs.cache
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\P11 - CalculaPoupança\obj\Debug\P11 - CalculaPoupança.exe
+C:\Users\Diego SL\Documents\projetos_github\CursoCSharp\AprendendoCSharp\P11 - CalculaPoupança\obj\Debug\P11 - CalculaPoupança.pdb
