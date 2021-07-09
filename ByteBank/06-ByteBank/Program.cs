@@ -12,11 +12,24 @@ namespace _06_ByteBank
         {
             ContaCorrente conta = new ContaCorrente();
 
-            conta.DefinirSaldo(-10);
+            //Definir Set
+            conta.SetSaldo(-10);
 
-            Console.WriteLine(conta.ObterSaldo());
+            //Obter Get
+            Console.WriteLine(conta.GetSaldo());
 
 
+            Cliente cliente = new Cliente();
+
+            cliente.nome = "Guilherme";
+            cliente.cpf = "433.4333.433-43";
+            cliente.profissao = "Pedreiro";
+
+            conta.Saldo = -10;
+            conta.Titular = cliente;
+
+            Console.WriteLine(conta.Titular.nome);
+            Console.WriteLine(conta.Saldo);
 
             Console.ReadLine();
 

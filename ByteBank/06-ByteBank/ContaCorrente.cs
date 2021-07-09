@@ -4,25 +4,70 @@ namespace _06_ByteBank
 
     public class ContaCorrente
     {
-        public Cliente titular;
+
+
+     //   private Cliente _titular;
+
+       /* public Cliente Titular
+        {
+            get
+            {
+                return _titular;
+            }
+            set
+            {
+                _titular = value;
+            }
+        }
+       */
+
+        //Como não tem logica.. pode ser escrito dessa forma
+        public Cliente Titular { get; set; }
+            
+
         public int agencia;
         public int numero;
-        private double saldo = 100;
+        //encaplsulamento
+        private double _saldo = 100;
 
-        public void DefinirSaldo(double saldo)
+
+        //Getters and Setters
+        public double Saldo
+        {
+            get
+            {
+                return _saldo;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    return;
+                }
+
+                _saldo = value;
+            }
+        }
+            
+            
+
+
+
+        //Definir Set
+        public void SetSaldo(double saldo)
         {
             if(saldo < 0)
             {
                 return;
             }
             
-            this.saldo = saldo;
+            this._saldo = saldo;
             
         }
-
-        public double ObterSaldo()
+        //Obter Get
+        public double GetSaldo()
         {
-            return saldo;
+            return _saldo;
         }
 
 
@@ -30,13 +75,13 @@ namespace _06_ByteBank
         //a Função tem que estar com a primeira letra Maiscula.
         public bool Sacar(double valor)
         {
-            if (this.saldo < valor)
+            if (this._saldo < valor)
             {
                 return false;
             }
             else
             {
-                this.saldo -= valor;
+                this._saldo -= valor;
                 return true;
             }
         }
@@ -44,20 +89,20 @@ namespace _06_ByteBank
         //Void não retorna nada
         public void Depositar(double valor)
         {
-            this.saldo += valor;
+            this._saldo += valor;
 
         }
 
         //função depositar
         public bool Transferir(double valor, ContaCorrente contaDestino)
         {
-            if (this.saldo < valor)
+            if (this._saldo < valor)
             {
                 return false;
             }
 
 
-            this.saldo -= valor;
+            this._saldo -= valor;
             contaDestino.Depositar(valor);
             return true;
 
