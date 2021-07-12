@@ -21,14 +21,14 @@ namespace _06_ByteBank
 
             Cliente cliente = new Cliente();
 
-            cliente.nome = "Guilherme";
-            cliente.cpf = "433.4333.433-43";
-            cliente.profissao = "Pedreiro";
+            cliente.Nome = "Guilherme";
+            cliente.CPF = "433.4333.433-43";
+            cliente.Profissao = "Pedreiro";
 
             conta.Saldo = -10;
             conta.Titular = cliente;
 
-            Console.WriteLine(conta.Titular.nome);
+            Console.WriteLine(conta.Titular.Nome);
             Console.WriteLine(conta.Saldo);
 
             Console.ReadLine();

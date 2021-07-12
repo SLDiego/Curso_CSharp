@@ -1,5 +1,5 @@
 ﻿
-namespace _06_ByteBank
+namespace _07_ByteBank
 {
 
     public class ContaCorrente
@@ -21,9 +21,31 @@ namespace _06_ByteBank
         }
        */
 
+
+
+
         //Como não tem logica.. pode ser escrito dessa forma
         public Cliente Titular { get; set; }
-        public int Agencia { get; set; }
+
+        public static int TotalDeContasCriadas { get; private set; }
+
+        private int _agencia;
+        public int Agencia 
+        {
+            get 
+            {
+                return _agencia;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    return;
+                }
+                _agencia = value;
+            }
+                
+        }
         public int Numero { get; set; }
 
 
@@ -69,6 +91,20 @@ namespace _06_ByteBank
         {
             return _saldo;
         }
+
+        
+        //metodo Construtor
+        public ContaCorrente(int agencia, int numero)
+        {
+            Agencia = agencia;
+            Numero = numero;
+
+            TotalDeContasCriadas++;
+        }
+
+
+
+
 
 
 
