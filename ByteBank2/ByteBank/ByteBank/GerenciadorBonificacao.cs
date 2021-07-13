@@ -17,11 +17,6 @@ namespace ByteBank
 
         }
 
-        public void Registrar(Diretor Diretor)
-        {
-            _totalBonificacao += Diretor.GetBonificacao();
-
-        }
 
 
         //Método que retorna a bonificação Total 

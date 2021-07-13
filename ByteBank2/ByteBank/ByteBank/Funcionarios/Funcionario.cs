@@ -15,7 +15,8 @@ namespace ByteBank.Funcionarios
 
 
         //Método que retorna a bonificação 
-        public double GetBonificacao()
+        // Virtual metodo pode ser subscrevido
+        public virtual double GetBonificacao()
         {
             return Salario * 0.10;
         }
