@@ -11,7 +11,7 @@ namespace ByteBank.Sistemas
     {
 
         //recebe função Autenticar() da classe Autenticavel
-        public bool Logar(Autenticavel funcionario, string senha)
+        public bool Logar(IAutenticavel funcionario, string senha)
         {
             //recebe o valor da Funcao Auntenticar(verdadeiro ou falso)  
             bool usuarioAutenticado = funcionario.Autenticar(senha);

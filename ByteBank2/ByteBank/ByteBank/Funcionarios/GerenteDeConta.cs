@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ByteBank.Funcionarios
 {
     //Herança GerenteDeConta - Autenticavel - Funcionario
-    public class GerenteDeConta : Autenticavel
+    public class GerenteDeConta : FuncionarioAutenticavel
     {
         
 

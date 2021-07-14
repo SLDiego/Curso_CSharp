@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ByteBank.Funcionarios
 {
     //Herança Diretor - Autenticavel - Funcionario
-    public class Diretor : Autenticavel
+    public class Diretor : FuncionarioAutenticavel
     {
         
         //Método Contrutor, pegando da base Funcionario
@@ -18,6 +18,8 @@ namespace ByteBank.Funcionarios
         }
 
 
+        
+
         public override void AumentaSalario() 
         {
             //Salario = Salario + (Salario * 0.1);
@@ -25,6 +27,7 @@ namespace ByteBank.Funcionarios
             Salario *= 1.15;
 
         }
+
 
         //Método que retorna a bonificação 
         //sobrescreve o metodo do Funcionario
