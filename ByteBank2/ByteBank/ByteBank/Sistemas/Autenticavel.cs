@@ -18,7 +18,7 @@ namespace ByteBank.Sistemas
         }
 
         
-        //Autenticar Senha do Sistema Interno
+        //Autenticar Senha do SistemaInterno
         public bool Autenticar(String senha)
         {
             return Senha == senha;
