@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ByteBank.Sistemas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class Diretor : Autenticavel
     {
+        
         //Método Contrutor, pegando da base Funcionario
         public Diretor(string cpf) : base(cpf, 5000)
         {
@@ -30,5 +32,9 @@ namespace ByteBank.Funcionarios
             // base puxa GetBonificacao da classe funicionario 
             return Salario * 0.5;
         }
+
+
+
+
     }
 }
