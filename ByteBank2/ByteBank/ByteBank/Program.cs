@@ -12,6 +12,8 @@ namespace ByteBank
         static void Main(string[] args)
         {
             CalcularBonificacao();
+
+            Console.WriteLine(Funcionario.TotalFuncionario);
             Console.ReadLine();
         }
 
@@ -31,10 +33,15 @@ namespace ByteBank
             GerenteDeConta camila = new GerenteDeConta("326.985.628-89");
             camila.Nome = "Camila";
 
+            GerenteDeConta joao = new GerenteDeConta("326.985.628-70");
+            joao.Nome = "Joao";
+
             gerenciadorBonificacao.Registrar(pedro);
             gerenciadorBonificacao.Registrar(roberta);
             gerenciadorBonificacao.Registrar(igor);
             gerenciadorBonificacao.Registrar(camila);
+            gerenciadorBonificacao.Registrar(joao);
+
 
             Console.WriteLine("Total de bonificações do mês " +
                 gerenciadorBonificacao.GetTotalBonificacao());
