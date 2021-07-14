@@ -55,7 +55,7 @@ namespace ByteBank
         {
             Agencia = agencia;
             Numero = numero;
-
+            
             TotalDeContasCriadas++;
 
             TaxaOperacao = 30 / TotalDeContasCriadas;
