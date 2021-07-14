@@ -36,6 +36,7 @@ namespace ByteBank
             GerenteDeConta joao = new GerenteDeConta("326.985.628-70");
             joao.Nome = "Joao";
 
+            // registrar funcionario, pega a bonificaçao e soma todas
             gerenciadorBonificacao.Registrar(pedro);
             gerenciadorBonificacao.Registrar(roberta);
             gerenciadorBonificacao.Registrar(igor);
