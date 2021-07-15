@@ -20,12 +20,21 @@ namespace ByteBank
                 Metodo();
 
             }
-            catch (DivideByZeroException excecao)
+            catch(DivideByZeroException erro)
             {
-                Console.WriteLine(excecao.Message);
-                Console.WriteLine(excecao.StackTrace);
-                
+                Console.WriteLine(erro.Message);
+                Console.WriteLine("Aconteceu um erro!");
             }
+            catch (Exception erro)
+            {
+
+                Console.WriteLine(erro.Message);
+                Console.WriteLine(erro.StackTrace);
+                Console.WriteLine("Aconteceu um erro!");
+            }
+
+           
+            
             
             Console.ReadLine();
         }
@@ -45,7 +54,8 @@ namespace ByteBank
 
         static void TestaDivisao(int divisor)
         {
-            Dividir(10, divisor);
+            int resultado = Dividir(10, divisor);
+            Console.WriteLine("Resultado da divisão de 10 por " + divisor + " é" + resultado);
         }
         static int Dividir(int numero, int divisor)
         {
