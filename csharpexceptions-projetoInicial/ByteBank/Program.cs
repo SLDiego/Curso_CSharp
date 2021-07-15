@@ -10,35 +10,26 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-            /*
-            ContaCorrente conta = new ContaCorrente(7480, 874150);
 
-            Console.WriteLine(ContaCorrente.TaxaOperacao);
-            */
             try
             {
-                Metodo();
-
-            }
-            catch(DivideByZeroException erro)
+                ContaCorrente conta = new ContaCorrente(0, 0);
+            }    
+            catch(ArgumentException e)
             {
-                Console.WriteLine(erro.Message);
-                Console.WriteLine("Aconteceu um erro!");
+                Console.WriteLine("Ocorreu uma exceçao do tipo ArgumentException");
+                Console.WriteLine(e.Message);
             }
-            catch (Exception erro)
+            catch(Exception e)
             {
-
-                Console.WriteLine(erro.Message);
-                Console.WriteLine(erro.StackTrace);
-                Console.WriteLine("Aconteceu um erro!");
+                Console.WriteLine(e.Message);
             }
-
-           
-            
+          
+                      
             
             Console.ReadLine();
         }
-
+        /*
         static void Metodo()
         {
             try
@@ -59,11 +50,18 @@ namespace ByteBank
         }
         static int Dividir(int numero, int divisor)
         {
-            ContaCorrente conta = null;
-            Console.WriteLine(conta.Saldo);
-            return numero / divisor;
-        }
+            try
+            {
 
+                return numero / divisor;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Exececao com numero= " + numero + " e divisor igual= " + divisor);
+                throw;
+            }
+        }
+        */
 
 
     }
