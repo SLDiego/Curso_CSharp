@@ -13,6 +13,7 @@ namespace ByteBank
 
             try
             {
+
                 ContaCorrente conta = new ContaCorrente(456, 4578420);
                 ContaCorrente conta2 = new ContaCorrente(456, 4578478);
                 
@@ -21,7 +22,8 @@ namespace ByteBank
                 conta.Depositar(50);
                 Console.WriteLine(conta.Saldo);
                 conta.Sacar(500);
-            }    
+            }   
+            
             catch(ArgumentException e)
             {
                 Console.WriteLine("Argumento com problema: " + e.ParamName);
