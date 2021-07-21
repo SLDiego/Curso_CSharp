@@ -18,22 +18,25 @@ namespace ByteBank
                 ContaCorrente conta2 = new ContaCorrente(456, 4578478);
                 
 
-                conta2.Transferir(-10, conta);
+                conta2.Transferir(1000, conta);
 
                 conta.Depositar(50);
                 Console.WriteLine(conta.Saldo);
-                conta.Sacar(500);
+                conta.Sacar(500) ;
             }   
             
             catch(ArgumentException e)
             {
                 Console.WriteLine("Argumento com problema: " + e.ParamName);
-
                 Console.WriteLine("Ocorreu uma exceçao do tipo ArgumentException");
                 Console.WriteLine(e.Message);
             }
             catch (SaldoInsulficienteException e)
             {
+                Console.WriteLine(e.Saldo);
+                Console.WriteLine(e.ValorSaque);
+                Console.WriteLine(e.StackTrace);
+
                 Console.WriteLine(e.Message);
                 Console.WriteLine("Excessão do tipo SaldoInsulficienteException");
             }
