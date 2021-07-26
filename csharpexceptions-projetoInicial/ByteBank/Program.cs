@@ -10,82 +10,53 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-
             try
             {
+                ContaCorrente conta1 = new ContaCorrente(4564, 789684);
+                ContaCorrente conta2 = new ContaCorrente(7891, 456794);
 
-                ContaCorrente conta = new ContaCorrente(456, 4578420);
-                ContaCorrente conta2 = new ContaCorrente(456, 4578478);
-                
-
-                conta2.Transferir(1000, conta);
-
-                conta.Depositar(50);
-                Console.WriteLine(conta.Saldo);
-                conta.Sacar(500) ;
-            }   
-            
-            catch(ArgumentException e)
-            {
-                Console.WriteLine("Argumento com problema: " + e.ParamName);
-                Console.WriteLine("Ocorreu uma exceçao do tipo ArgumentException");
-                Console.WriteLine(e.Message);
+                // conta1.Transferir(10000, conta2);
+                conta1.Sacar(10000);
             }
-            catch (SaldoInsulficienteException e)
+            catch (OperacaoFinanceiraException e)
             {
-                Console.WriteLine(e.Saldo);
-                Console.WriteLine(e.ValorSaque);
+                Console.WriteLine(e.Message);
                 Console.WriteLine(e.StackTrace);
 
-                Console.WriteLine(e.Message);
-                Console.WriteLine("Excessão do tipo SaldoInsulficienteException");
+                // Console.WriteLine("Informações da INNER EXCEPTION (exceção interna):");
+                
             }
 
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-          
-                      
-            
+            Console.WriteLine("Execução finalizada. Tecle enter para sair");
             Console.ReadLine();
         }
-        /*
-        static void Metodo()
+
+        // Teste com a cadeia de chamada:
+        // Metodo -> TestaDivisao -> Dividir
+        private static void Metodo()
         {
-            try
-            {
-                TestaDivisao(0);
-            }
-            catch (NullReferenceException excecao)
-            {
-                Console.WriteLine(excecao.Message);
-                Console.WriteLine(excecao.StackTrace);
-            }
+            TestaDivisao(0);
         }
 
-        static void TestaDivisao(int divisor)
+        private static void TestaDivisao(int divisor)
         {
             int resultado = Dividir(10, divisor);
-            Console.WriteLine("Resultado da divisão de 10 por " + divisor + " é" + resultado);
+            Console.WriteLine("Resultado da divisão de 10 por " + divisor + " é " + resultado);
         }
-        static int Dividir(int numero, int divisor)
+
+        private static int Dividir(int numero, int divisor)
         {
             try
             {
-
                 return numero / divisor;
             }
             catch (DivideByZeroException)
             {
-                Console.WriteLine("Exececao com numero= " + numero + " e divisor igual= " + divisor);
+                Console.WriteLine("Exceção com numero=" + numero + " e divisor=" + divisor);
                 throw;
+                Console.WriteLine("Código depois do throw");
             }
         }
-        */
-
 
     }
-
-
 }
